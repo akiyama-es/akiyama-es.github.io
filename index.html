@@ -33,21 +33,76 @@
         .nav {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 1em;
+            gap: 12px;
+            margin-bottom: 1.5em;
         }
-    
+
         .nav a {
             text-decoration: none;
+
+            padding: 8px 14px;
+
+            border: 1px solid #999999;
+            border-radius: 8px;
+
+            background-color: #fff8dd;
+
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+        .nav a:hover {
+            background-color: #f0e6bb;
         }
     
-        .date {
-            display: inline-block;
-            min-width: 140px;
+        .cv-section {
+            margin-bottom: 2em;
         }
-    
+
+        .cv-title {
+            font-weight: bold;
+            margin-bottom: 0.7em;
+        }
+
+        .cv-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6em;
+        }
+
+        .cv-row {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            column-gap: 24px;
+            align-items: start;
+        }
+
+        .cv-date {
+            white-space: nowrap;
+        }
+
+        .section {
+            margin-bottom: 2em;
+        }
+
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 0.7em;
+        }
+
+        .section-content {
+            line-height: 1.7;
+        }
+
+        .last-update {
+            font-size: 0.95rem;
+            color: #666666;
+            margin-bottom: 2em;
+        }
+
         @media screen and (max-width: 600px) {
-    
+
             body {
                 padding: 12px;
                 font-size: 15px;
@@ -62,30 +117,72 @@
                 margin-bottom: 0.2em;
                 font-weight: bold;
             }
-    
+
+            .cv-row {
+                grid-template-columns: 1fr;
+                row-gap: 0.2em;
+            }
+
+            .cv-date {
+                font-weight: bold;
+            }
+
         }
-        </style>
+    </style>
     
 </head>
 
 <body>
 
     <h2>Shinichiro AKIYAMA / 秋山 進一郎</h2>
-    <h3><a href="./hp/publication.html"><b>[Publication]</b></a> <a href="./hp/presentation.html"><b>[Presentation]</b></a> <a href="./hp/award.html"><b>[Award]</b></a> <a href="./hp/projects.html"><b>[Research Projects]</b></a> <a href="./hp/teaching.html"><b>[Teaching Experience]</b></a> <a href="./hp/workshops.html"><b>[Workshop Organization]</b></a> <a href="./hp/outreach.html"><b>[Outreach]</b></a> <a href="./hp/notes.html"><b>[Notes]</b></a></h3>
-    [Last update: 2026/5/26]<br/>
+
+    <nav class="nav">
+
+        <a href="./hp/publication.html">Publication</a>
+
+        <a href="./hp/presentation.html">Presentation</a>
+
+        <a href="./hp/award.html">Award</a>
+
+        <a href="./hp/projects.html">Research Projects</a>
+
+        <a href="./hp/teaching.html">Teaching Experience</a>
+
+        <a href="./hp/workshops.html">Workshop Organization</a>
+
+        <a href="./hp/outreach.html">Outreach</a>
+
+        <a href="./hp/notes.html">Notes</a>
+
+    </nav>
     
-    <ul>
+    <div class="last-update">
+        [Last update: 2026/5/26]
+    </div>
+    
+    <div class="section">
 
-        <b>Affiliation:</b><br/>
-        <a href="https://www.ccs.tsukuba.ac.jp/eng/">Center for Computational Sciences, University of Tsukuba</a><br/>
-        <a href="https://www.phys.s.u-tokyo.ac.jp/en/">Graduate School of Science, The University of Tokyo</a><br/>
-        
-    </ul>
+        <div class="section-title">Affiliation</div>
+    
+        <div class="section-content">
+    
+            <a href="https://www.ccs.tsukuba.ac.jp/eng/">
+                Center for Computational Sciences, University of Tsukuba
+            </a><br>
+    
+            <a href="https://www.phys.s.u-tokyo.ac.jp/en/">
+                Graduate School of Science, The University of Tokyo
+            </a>
+    
+        </div>
+    
+    </div>
 
-    <ul>
+    <div class="section">
 
-        <b>Keywords:</b>
-        <ul>
+        <div class="section-title">Keywords</div>
+    
+        <ul class="simple-list">
             <li>Critical phenomena</li>
             <li>Field theory on a lattice</li>
             <li>Gauge-Higgs model</li>
@@ -98,90 +195,205 @@
             <li>Quantum field theory at nonzero temperature and density</li>
             <li>Sign problem</li>
             <li>Tensor network</li>
-            <li>Tensor renormalization group (TRG)</li><br/>
+            <li>Tensor renormalization group (TRG)</li>
         </ul>
-        
-    </ul>
-
-    <ul>
-
-        <b>E-mail:</b><br/> 
-        akiyama_at_ccs.tsukuba.ac.jp<br/>
-        ("_at_" -> "@")<br/>
-        
-    </ul>
-
-    <ul>
-
-        <b>Education</b><br/>
-        <span class="mgr-10">2019/04 - 2022/03</span> PhD, <a
-        href="http://www.tsukuba.ac.jp/">University of Tsukuba</a><br/>
-        <span class="mgr-10">2017/04 - 2019/03</span> Master, <a href="http://www.tsukuba.ac.jp/">University of Tsukuba</a><br/> 
-        <span class="mgr-10">2013/04 - 2017/03</span> Undergraduate, <a href="https://www.icu.ac.jp/">International Christian University</a><br/>
-
-    </ul>
-
-    <ul>
-
-        <b>Research Career</b><br/>
-        <span class="mgr-20">2025/07 - present</span> <a href="https://tristar.sec.tsukuba.ac.jp/en/">TRiSTAR Fellow</a> at University of Tsukuba<br/>
-        <span class="mgr-10">2024/07 - 2025/07</span> <a href="https://tristar.sec.tsukuba.ac.jp/en/">TRiSTAR Pre-fellow</a> at University of Tsukuba<br/>
-	    <span class="mgr-20">2023/06 - present</span> Assistant Professor (tenure track) at <a href="https://www.ccs.tsukuba.ac.jp/eng/">CCS, University of Tsukuba</a> (<a href="http://www-het.ph.tsukuba.ac.jp/">Particle Theory Group</a>)<br/>
-	    <span class="mgr-20">2023/06 - present</span> Visiting researcher at <a href="https://exa.phys.s.u-tokyo.ac.jp/en/index_html?set_language=en">Todo Group (藤堂研)</a>, <a href="https://www.phys.s.u-tokyo.ac.jp/en/">Graduate School of Science, The University of Tokyo</a><br/>
-        <span class="mgr-10">2022/04 - 2023/05</span> Project Assistant Professor at <a href="https://qsw.phys.s.u-tokyo.ac.jp/">Endowed Chair for Quantum Software</a>, <a href="https://www.s.u-tokyo.ac.jp/en/">Graduate School of Science, The University of Tokyo</a><br/>
-        <span class="mgr-10">2021/04 - 2022/03</span> JSPS Research Fellow (DC2) at <a href="https://www.ccs.tsukuba.ac.jp/eng/">CCS, University of Tsukuba</a> (<a href="http://www-het.ph.tsukuba.ac.jp/">Particle Theory Group</a>)<br/>
-        <span class="mgr-10">2020/05 - 2021/03</span> Research assistant at <a href="https://www.ccs.tsukuba.ac.jp/eng/">CCS, University of Tsukuba</a> (<a href="http://www-het.ph.tsukuba.ac.jp/">Particle Theory Group</a>)<br/>
-        <span class="mgr-10">2019/06 - 2019/11</span> Research assistant at <a href="http://www.pas.tsukuba.ac.jp/english/"> GSPAS, University of Tsukuba</a> (<a href="http://www-het.ph.tsukuba.ac.jp/">Particle Theory Group</a>)<br/>
-
-    </ul>
-
-    <ul>
-
-        <b>Memberships</b><br/>
-        <ul>
-            <li><a href= "https://www.jps.or.jp/english/">The Physical Society of Japan</a></li>
-        </ul>
-        
-
-    </ul>
-
-    <ul>
-
-        <b>Links</b><br/>
-        <ul>
-            <li><a href="https://inspirehep.net/authors/1794670"> INSPIRE</a></li></li>
-            <li><a href="https://researchmap.jp/s_akiyama"> researchmap</a></li></li>
-            <li><a href="https://github.com/akiyama-es"> GitHub</a></li></li><br/>
-        </ul>
-        
-
-    </ul>
-
-    <!--
-
-    <ul>
-
     
+    </div>
 
-        <a href="./publication.html"><h3><b>Publication</b></h3></a>
+    <div class="section">
 
-        <a href="./presentation.html"><h3><b>Presentation</b></h3></a>
+        <div class="section-title">E-mail</div>
+    
+        <div class="section-content">
+            <code>akiyama_at_ccs.tsukuba.ac.jp</code><br>
+            Replace <code>_at_</code> with <code>@</code>
+        </div>
+    
+    </div>
 
-        <a href="./award.html"><h3><b>Award</b></h3></a>
+    <div class="cv-section">
 
-        <a href="./members.html"><h3><b>Professional Memberships</b></h3></a>
+        <div class="cv-title">Education</div>
+    
+        <div class="cv-list">
+    
+            <div class="cv-row">
+                <div class="cv-date">2019/04 - 2022/03</div>
+                <div>
+                    PhD,
+                    <a href="http://www.tsukuba.ac.jp/">
+                        University of Tsukuba
+                    </a>
+                </div>
+            </div>
+    
+            <div class="cv-row">
+                <div class="cv-date">2017/04 - 2019/03</div>
+                <div>
+                    Master,
+                    <a href="http://www.tsukuba.ac.jp/">
+                        University of Tsukuba
+                    </a>
+                </div>
+            </div>
+    
+            <div class="cv-row">
+                <div class="cv-date">2013/04 - 2017/03</div>
+                <div>
+                    Undergraduate,
+                    <a href="https://www.icu.ac.jp/">
+                        International Christian University
+                    </a>
+                </div>
+            </div>
+    
+        </div>
+    
+    </div>
+    
+    <div class="cv-section">
+    
+        <div class="cv-title">Research Career</div>
+    
+        <div class="cv-list">
+    
+            <div class="cv-row">
+                <div class="cv-date">2025/07 - present</div>
+                <div>
+                    <a href="https://tristar.sec.tsukuba.ac.jp/en/">
+                        TRiSTAR Fellow
+                    </a>
+                    at University of Tsukuba
+                </div>
+            </div>
+    
+            <div class="cv-row">
+                <div class="cv-date">2024/07 - 2025/07</div>
+                <div>
+                    <a href="https://tristar.sec.tsukuba.ac.jp/en/">
+                        TRiSTAR Pre-fellow
+                    </a>
+                    at University of Tsukuba
+                </div>
+            </div>
+    
+            <div class="cv-row">
+                <div class="cv-date">2023/06 - present</div>
+                <div>
+                    Assistant Professor (tenure track) at
+                    <a href="https://www.ccs.tsukuba.ac.jp/eng/">
+                        CCS, University of Tsukuba
+                    </a>
+                    (
+                    <a href="http://www-het.ph.tsukuba.ac.jp/">
+                        Particle Theory Group
+                    </a>
+                    )
+                </div>
+            </div>
+    
+            <div class="cv-row">
+                <div class="cv-date">2023/06 - present</div>
+                <div>
+                    Visiting researcher at
+                    <a href="https://exa.phys.s.u-tokyo.ac.jp/en/index_html?set_language=en">
+                        Todo Group (藤堂研)
+                    </a>,
+                    <a href="https://www.phys.s.u-tokyo.ac.jp/en/">
+                        Graduate School of Science,
+                        The University of Tokyo
+                    </a>
+                </div>
+            </div>
+    
+            <div class="cv-row">
+                <div class="cv-date">2022/04 - 2023/05</div>
+                <div>
+                    Project Assistant Professor at
+                    <a href="https://qsw.phys.s.u-tokyo.ac.jp/">
+                        Endowed Chair for Quantum Software
+                    </a>,
+                    <a href="https://www.s.u-tokyo.ac.jp/en/">
+                        Graduate School of Science,
+                        The University of Tokyo
+                    </a>
+                </div>
+            </div>
+    
+            <div class="cv-row">
+                <div class="cv-date">2021/04 - 2022/03</div>
+                <div>
+                    JSPS Research Fellow (DC2) at
+                    <a href="https://www.ccs.tsukuba.ac.jp/eng/">
+                        CCS, University of Tsukuba
+                    </a>
+                    (
+                    <a href="http://www-het.ph.tsukuba.ac.jp/">
+                        Particle Theory Group
+                    </a>
+                    )
+                </div>
+            </div>
+    
+            <div class="cv-row">
+                <div class="cv-date">2020/05 - 2021/03</div>
+                <div>
+                    Research assistant at
+                    <a href="https://www.ccs.tsukuba.ac.jp/eng/">
+                        CCS, University of Tsukuba
+                    </a>
+                    (
+                    <a href="http://www-het.ph.tsukuba.ac.jp/">
+                        Particle Theory Group
+                    </a>
+                    )
+                </div>
+            </div>
+    
+            <div class="cv-row">
+                <div class="cv-date">2019/06 - 2019/11</div>
+                <div>
+                    Research assistant at
+                    <a href="http://www.pas.tsukuba.ac.jp/english/">
+                        GSPAS, University of Tsukuba
+                    </a>
+                    (
+                    <a href="http://www-het.ph.tsukuba.ac.jp/">
+                        Particle Theory Group
+                    </a>
+                    )
+                </div>
+            </div>
+    
+        </div>
+    
+    </div>
 
-        <a href="./projects.html"><h3><b>Research Projects</b></h3></a>
+    <div class="section">
 
-        <a href="./teaching.html"><h3><b>Teaching Experience</b></h3></a>
+        <div class="section-title">Memberships</div>
+    
+        <ul class="simple-list">
+            <li>
+                <a href="https://www.jps.or.jp/english/">
+                    The Physical Society of Japan
+                </a>
+            </li>
+        </ul>
+    
+    </div>
 
-        <a href="./outreach.html"><h3><b>Outreach</b></h3></a>
+    <div class="section">
 
-        <a href="./others.html"><h3><b>Others</b></h3></a>
-
-    </ul>
-
-    -->
+        <div class="section-title">Links</div>
+    
+        <ul class="simple-list">
+            <li><a href="...">INSPIRE</a></li>
+            <li><a href="...">researchmap</a></li>
+            <li><a href="...">GitHub</a></li>
+        </ul>
+    
+    </div>
 
     <hr>
 

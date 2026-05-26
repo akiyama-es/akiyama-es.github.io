@@ -33,21 +33,76 @@
         .nav {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 1em;
+            gap: 12px;
+            margin-bottom: 1.5em;
         }
-    
+
         .nav a {
             text-decoration: none;
+
+            padding: 8px 14px;
+
+            border: 1px solid #999999;
+            border-radius: 8px;
+
+            background-color: #fff8dd;
+
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+        .nav a:hover {
+            background-color: #f0e6bb;
         }
     
-        .date {
-            display: inline-block;
-            min-width: 140px;
+        .cv-section {
+            margin-bottom: 2em;
         }
-    
+
+        .cv-title {
+            font-weight: bold;
+            margin-bottom: 0.7em;
+        }
+
+        .cv-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6em;
+        }
+
+        .cv-row {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            column-gap: 24px;
+            align-items: start;
+        }
+
+        .cv-date {
+            white-space: nowrap;
+        }
+
+        .section {
+            margin-bottom: 2em;
+        }
+
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 0.7em;
+        }
+
+        .section-content {
+            line-height: 1.7;
+        }
+
+        .last-update {
+            font-size: 0.95rem;
+            color: #666666;
+            margin-bottom: 2em;
+        }
+
         @media screen and (max-width: 600px) {
-    
+
             body {
                 padding: 12px;
                 font-size: 15px;
@@ -62,7 +117,16 @@
                 margin-bottom: 0.2em;
                 font-weight: bold;
             }
-    
+
+            .cv-row {
+                grid-template-columns: 1fr;
+                row-gap: 0.2em;
+            }
+
+            .cv-date {
+                font-weight: bold;
+            }
+
         }
     </style>
     
@@ -70,27 +134,136 @@
 
 <body>
 
-    <h3><b>Teaching Experience</b></h3>
+    <h2>Teaching Experience</h2>
 
-    <ol>
+    <nav class="nav">
 
-        <!--<ul>-->
-        <span class="mgr-30">2025 Autumn</span> <a href="https://kdb.tsukuba.ac.jp/syllabi/2025/FCC2345/jpn/0">"Computational Physics II"</a> at University of Tsukuba <br/> 
-        <span class="mgr-30">2024 Autumn</span> <a href="https://www.tsukuba.ac.jp/education/g-courses-g-tsukuba-tokyo/2024-2/pdf/24AJC1.pdf">物理学セミナー「格子場の理論とテンソルネットワーク」</a> at University of Tsukuba <br/>
-        <span class="mgr-30">2024 Autumn</span> <a href="https://kdb.tsukuba.ac.jp/syllabi/2024/FCC2345/jpn/">"Computational Physics II"</a> at University of Tsukuba <br/> 
-        <span class="mgr-41">2024 Spring</span> <a href="https://www.k.kyoto-u.ac.jp/external/open_syllabus/department_syllabus?lectureNo=19865&departmentNo=9&display_lang=jp">YITP Intensive lecture 1「格子場の理論におけるテンソル繰り込み群の方法」</a> at Kyoto University (6/5-6/7)<br/> 
-        <span class="mgr-41">2021 Spring</span> Teaching assistant for "Computational Physics I" at University of Tsukuba<br/> 
-        <span class="mgr-30">2019 Autumn</span> Help desk for undergraduate students in College of Physics at University of Tsukuba<br/>
-        <span class="mgr-41">2019 Spring</span> Help desk for undergraduate students in College of Physics at University of Tsukuba<br/>
-        <span class="mgr-30">2018 Autumn</span> Teaching assistant for "Electromagnetism II" at University of Tsukuba<br/>
-        <span class="mgr-41">2018 Spring</span> Teaching assistant for "Mechanics I" at University of Tsukuba<br/>
-        <span class="mgr-30">2017 Autumn</span> Teaching assistant for "Computational Physics I" at University of Tsukuba 
-        <!--</ul>-->
+        <a href="../hp/publication.html">Publication</a>
+
+        <a href="../hp/presentation.html">Presentation</a>
+
+        <a href="../hp/award.html">Award</a>
+
+        <a href="../hp/projects.html">Research Projects</a>
+
+        <a href="../hp/teaching.html">Teaching Experience</a>
+
+        <a href="../hp/workshops.html">Workshop Organization</a>
+
+        <a href="../hp/outreach.html">Outreach</a>
+
+        <a href="../hp/notes.html">Notes</a>
+
+        <a href="../index.html">Back to Home</a>
+
+    </nav>
+
+    <div class="cv-section">
+
+        <div class="cv-title">Teaching Experience</div>
     
-    </ol>
+        <div class="cv-list">
+    
+            <div class="cv-row">
+                <div class="cv-date">2025 Autumn</div>
+                <div>
+                    <a href="https://kdb.tsukuba.ac.jp/syllabi/2025/FCC2345/jpn/0">
+                        Computational Physics II
+                    </a>
+                    at University of Tsukuba
+                </div>
+            </div>
+    
+            <div class="cv-row">
+                <div class="cv-date">2024 Autumn</div>
+                <div>
+                    <a href="https://www.tsukuba.ac.jp/education/g-courses-g-tsukuba-tokyo/2024-2/pdf/24AJC1.pdf">
+                        物理学セミナー「格子場の理論とテンソルネットワーク」
+                    </a>
+                    at University of Tsukuba
+                </div>
+            </div>
+    
+            <div class="cv-row">
+                <div class="cv-date">2024 Autumn</div>
+                <div>
+                    <a href="https://kdb.tsukuba.ac.jp/syllabi/2024/FCC2345/jpn/">
+                        Computational Physics II
+                    </a>
+                    at University of Tsukuba
+                </div>
+            </div>
+    
+            <div class="cv-row">
+                <div class="cv-date">2024 Spring</div>
+                <div>
+                    <a href="https://www.k.kyoto-u.ac.jp/external/open_syllabus/department_syllabus?lectureNo=19865&departmentNo=9&display_lang=jp">
+                        YITP Intensive lecture 1
+                        「格子場の理論におけるテンソル繰り込み群の方法」
+                    </a>
+                    at Kyoto University (6/5–6/7)
+                </div>
+            </div>
+    
+            <div class="cv-row">
+                <div class="cv-date">2021 Spring</div>
+                <div>
+                    Teaching assistant for
+                    "Computational Physics I"
+                    at University of Tsukuba
+                </div>
+            </div>
+    
+            <div class="cv-row">
+                <div class="cv-date">2019 Autumn</div>
+                <div>
+                    Help desk for undergraduate students
+                    in College of Physics
+                    at University of Tsukuba
+                </div>
+            </div>
+    
+            <div class="cv-row">
+                <div class="cv-date">2019 Spring</div>
+                <div>
+                    Help desk for undergraduate students
+                    in College of Physics
+                    at University of Tsukuba
+                </div>
+            </div>
+    
+            <div class="cv-row">
+                <div class="cv-date">2018 Autumn</div>
+                <div>
+                    Teaching assistant for
+                    "Electromagnetism II"
+                    at University of Tsukuba
+                </div>
+            </div>
+    
+            <div class="cv-row">
+                <div class="cv-date">2018 Spring</div>
+                <div>
+                    Teaching assistant for
+                    "Mechanics I"
+                    at University of Tsukuba
+                </div>
+            </div>
+    
+            <div class="cv-row">
+                <div class="cv-date">2017 Autumn</div>
+                <div>
+                    Teaching assistant for
+                    "Computational Physics I"
+                    at University of Tsukuba
+                </div>
+            </div>
+    
+        </div>
+    
+    </div>
 
     <hr>
-    <a href="../index.html"> Back</a>
 
 </body>
 </html>

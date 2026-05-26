@@ -33,21 +33,76 @@
         .nav {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 1em;
+            gap: 12px;
+            margin-bottom: 1.5em;
         }
-    
+
         .nav a {
             text-decoration: none;
+
+            padding: 8px 14px;
+
+            border: 1px solid #999999;
+            border-radius: 8px;
+
+            background-color: #fff8dd;
+
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+        .nav a:hover {
+            background-color: #f0e6bb;
         }
     
-        .date {
-            display: inline-block;
-            min-width: 140px;
+        .cv-section {
+            margin-bottom: 2em;
         }
-    
+
+        .cv-title {
+            font-weight: bold;
+            margin-bottom: 0.7em;
+        }
+
+        .cv-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6em;
+        }
+
+        .cv-row {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            column-gap: 24px;
+            align-items: start;
+        }
+
+        .cv-date {
+            white-space: nowrap;
+        }
+
+        .section {
+            margin-bottom: 2em;
+        }
+
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 0.7em;
+        }
+
+        .section-content {
+            line-height: 1.7;
+        }
+
+        .last-update {
+            font-size: 0.95rem;
+            color: #666666;
+            margin-bottom: 2em;
+        }
+
         @media screen and (max-width: 600px) {
-    
+
             body {
                 padding: 12px;
                 font-size: 15px;
@@ -62,7 +117,16 @@
                 margin-bottom: 0.2em;
                 font-weight: bold;
             }
-    
+
+            .cv-row {
+                grid-template-columns: 1fr;
+                row-gap: 0.2em;
+            }
+
+            .cv-date {
+                font-weight: bold;
+            }
+
         }
     </style>
     
@@ -70,7 +134,29 @@
 
 <body>
 
-<h3><b>Publication</b></h3>
+    <h2>Publication</h2>
+
+    <nav class="nav">
+
+        <a href="../hp/publication.html">Publication</a>
+
+        <a href="../hp/presentation.html">Presentation</a>
+
+        <a href="../hp/award.html">Award</a>
+
+        <a href="../hp/projects.html">Research Projects</a>
+
+        <a href="../hp/teaching.html">Teaching Experience</a>
+
+        <a href="../hp/workshops.html">Workshop Organization</a>
+
+        <a href="../hp/outreach.html">Outreach</a>
+
+        <a href="../hp/notes.html">Notes</a>
+
+        <a href="../index.html">Back to Home</a>
+
+    </nav>
 
 <!--<ul>-->
     <b>Papers</b>
@@ -132,10 +218,7 @@
     <em>"Grassmann tensor renormalization group for the massive Schwinger model with a &theta; term using staggered fermions"</em><br/>
     <a href="https://link.springer.com/article/10.1007/JHEP11(2025)036">JHEP 11 (2025) 036</a>
     <a href="https://arxiv.org/abs/2412.08959">[arXiv:2412.08959 [hep-lat]]</a><br/>
-    We have investigated the Nf=2 massive Schwinger model by employing staggered fermions.
-    The same model was previously studied by the tensor renormalization group based on the so-called dual formulation.
-    In our study, we employ the Grassmann tensor network formulation, which enables us to deal with the model with a &theta; term even in the massive regime.
-    Our numerical results show that the model in the continuum limit and on a lattice could have different phase structures.
+    We have formulated the lattice Schwinger model using staggered fermions so that the continuum limit reproduces the two-flavor theory. Previous numerical studies of this model had relied on Monte Carlo simulations in the world-line representation and on tensor renormalization group methods. However, the world-line formulation suffers from a serious limitation and it becomes difficult to treat the finite-mass region directly. To overcome this issue, We have applied the Grassmann tensor network approach, which allows fermionic degrees of freedom to be handled explicitly without introducing a world-line representation. Using this formulation, We have successfully carried out numerical calculations of the free energy, topological charge density, and topological susceptibility in the finite-mass regime. One particularly interesting outcome was the numerical confirmation of an exponentially small mass gap, an exponentially large correlation length, equivalently, at &theta; = &pi; in the small fermion-mass region, as predicted by a recent analytical study in quantum field theory. Our work has been the first numerical demonstration of this within the path integral approach.
     </li><br/>
     
     <li>Kwok Ho Pai, <u>Shinichiro Akiyama</u>, Synge Todo<br/>
@@ -370,7 +453,6 @@
 </ol>
 
     <hr>
-    <a href="../index.html"> Back</a>
 
 </body>
 </html>
