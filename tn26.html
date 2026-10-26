@@ -100,9 +100,121 @@
             margin: 0 auto;
         }
 
+
+        .program-day {
+            max-width: 850px;
+            margin: 30px auto;
+        }
+
+        .program-date {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            border-bottom: 2px solid #333;
+            padding-bottom: 12px;
+            margin-bottom: 8px;
+        }
+
+        .program-date h3 {
+            margin: 0;
+            font-size: 1.0rem;
+        }
+
+        .program-date span {
+            color: #777;
+            font-size: 0.85rem;
+        }
+
+        .program-item,
+        .program-break {
+            display: grid;
+            grid-template-columns: 115px 1fr;
+            gap: 20px;
+            padding: 16px 8px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .program-time {
+            font-size: 0.9rem;
+            font-variant-numeric: tabular-nums;
+            color: #555;
+            padding-top: 2px;
+            white-space: nowrap;
+        }
+
+        .program-content {
+            min-width: 0;
+        }
+
+        .program-speaker {
+            font-weight: 600;
+            font-size: 0.92rem;
+        }
+
+        .program-chair {
+            color: #888;
+            font-size: 0.8rem;
+            margin-top: 2px;
+        }
+
+        .program-title {
+            font-size: 0.92rem;
+            line-height: 1.6;
+            margin-top: 6px;
+        }
+
+        .program-break {
+            color: #888;
+            font-size: 0.9rem;
+            padding-top: 11px;
+            padding-bottom: 11px;
+        }
+
+        .online-label {
+            display: inline-block;
+            margin-left: 7px;
+            padding: 0px 6px;
+            border: 1px solid #9aafbd;
+            border-radius: 3px;
+            color: #668397;
+            font-size: 0.68rem;
+            font-weight: 500;
+            vertical-align: 2px;
+            line-height: 1.3;
+        }
+
+        .poster-list {
+            margin-top: 12px;
+        }
+
+        .poster-item {
+            margin-top: 12px;
+        }
+
+        .poster-item:first-child {
+            margin-top: 0;
+        }
+
+        .poster-speaker {
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            .program-item,
+            .program-break {
+                grid-template-columns: 85px 1fr;
+                gap: 10px;
+            }
+
+            .program-time {
+                font-size: 0.8rem;
+            }
+        }
+
     </style>
 
 </head>
+
 <body bgcolor="#ffffcc" text="#663333" link="#336600" vlink="#996633" alink="#ff6633">
 
 <div class="cozyspace-wrapper">
@@ -158,29 +270,424 @@
 
 <h3><b>Program</b></h3>
 
-    <ul>
+<div class="program-day">
 
-        December 7th 
+    <div class="program-date">
+        <h3>December 7th</h3>
+        <!--<span>Venue opens at 12:30</span>-->
+    </div>
 
-        <table>
+    <!-- Welcome -->
+    <div class="program-item">
+        <div class="program-time">12:50&ndash;13:00</div>
+        <div class="program-content">
+            <div class="program-title">Welcome</div>
+        </div>
+    </div>
 
-        </table>
-        </br>
+    <!-- Talk 1 -->
+    <div class="program-item">
+        <div class="program-time">13:00&ndash;14:00</div>
+        <div class="program-content">
+            <div class="program-speaker">Tsuyoshi Okubo</div>
+            <div class="program-chair">Chair: TBA</div>
+            <div class="program-title">TBA</div>
+        </div>
+    </div>
 
-        December 8th
+    <!-- Talk 2 -->
+    <div class="program-item">
+        <div class="program-time">14:00&ndash;14:20</div>
+        <div class="program-content">
+            <div class="program-speaker">Akira Matsumoto</div>
+            <div class="program-chair">Chair: TBA</div>
+            <div class="program-title">
+                Quantum magic and duality from
+                Clifford-circuit-augmented MPS
+            </div>
+        </div>
+    </div>
 
-        <table>
-            
-        </table>
-        </br>
-        
-        December 9th 
+    <!-- Talk 3 -->
+    <div class="program-item">
+        <div class="program-time">14:20&ndash;14:40</div>
+        <div class="program-content">
+            <div class="program-speaker">Shoichiro Kado</div>
+            <div class="program-chair">Chair: TBA</div>
+            <div class="program-title">
+                Transfer-Matrix Method for Classical Spin Systems with Clifford-Augmented Matrix Product States
+            </div>
+        </div>
+    </div>
 
-        <table>
-            
-        </table>
+    <!-- Break -->
+    <div class="program-break">
+        <div class="program-time">14:40&ndash;15:10</div>
+        <div>Break</div>
+    </div>
 
-    </ul>
+    <!-- Talk 4 -->
+    <div class="program-item">
+        <div class="program-time">15:10&ndash;15:50</div>
+        <div class="program-content">
+            <div class="program-speaker">
+                Keisuke Murota
+                <span class="online-label">Online</span>
+            </div>
+            <div class="program-chair">Chair: TBA</div>
+            <div class="program-title">
+                Embedding Tensor Network Machine Learning Models into Quantum Circuits
+            </div>
+        </div>
+    </div>
+
+    <!-- Talk 5 -->
+    <div class="program-item">
+        <div class="program-time">15:50&ndash;16:10</div>
+        <div class="program-content">
+            <div class="program-speaker">Ryo Sakai</div>
+            <div class="program-chair">Chair: TBA</div>
+            <div class="program-title">
+                Quantum hardware noise learning via differentiable Kraus representation on tensor networks
+            </div>
+        </div>
+    </div>
+
+    <!-- Break -->
+    <div class="program-break">
+        <div class="program-time">16:10&ndash;16:40</div>
+        <div>Break</div>
+    </div>
+
+    <!-- Talk 6 -->
+    <div class="program-item">
+        <div class="program-time">16:40&ndash;17:40</div>
+        <div class="program-content">
+            <div class="program-speaker">
+                Tilo Wettig and Jacques Bloch
+                <span class="online-label">Online</span>
+            </div>
+            <div class="program-chair">Chair: TBA</div>
+            <div class="program-title">
+                Tensor networks for QCD in the strong-coupling expansion
+            </div>
+        </div>
+    </div>
+
+    <!-- Talk 7 -->
+    <div class="program-item">
+        <div class="program-time">17:40&ndash;18:00</div>
+        <div class="program-content">
+            <div class="program-speaker">Yuto Sugimoto</div>
+            <div class="program-chair">Chair: TBA</div>
+            <div class="program-title">TBA</div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="program-day">
+
+    <div class="program-date">
+        <h3>December 8th</h3>
+        <!--<span>Venue opens at 12:30</span>-->
+    </div>
+
+    <!-- Talk 1 -->
+    <div class="program-item">
+        <div class="program-time">9:30&ndash;10:10</div>
+        <div class="program-content">
+            <div class="program-speaker">Atsushi Ueda</div>
+            <div class="program-chair">Chair: TBA</div>
+            <div class="program-title">Gauge theory at finite temperature: Interface roughening transition</div>
+        </div>
+    </div>
+
+    <!-- Talk 2 -->
+    <div class="program-item">
+        <div class="program-time">10:10&ndash;10:30</div>
+        <div class="program-content">
+            <div class="program-speaker">Kengo Kikuchi</div>
+            <div class="program-chair">Chair: TBA</div>
+            <div class="program-title">Tensor Network Formulation of PT-Symmetric Quantum Field Theory</div>
+        </div>
+    </div>
+
+    <!-- Talk 3 -->
+    <div class="program-item">
+        <div class="program-time">10:30&ndash;10:50</div>
+        <div class="program-content">
+            <div class="program-speaker">Gota Tanaka</div>
+            <div class="program-chair">Chair: TBA</div>
+            <div class="program-title">Tensor renormalization group analysis of entanglement negativity</div>
+        </div>
+    </div>
+
+    <!-- Break -->
+    <div class="program-break">
+        <div class="program-time">10:50&ndash;11:20</div>
+        <div>Break</div>
+    </div>
+
+    <!-- Talk4 -->
+    <div class="program-item">
+        <div class="program-time">11:20&ndash;12:00</div>
+        <div class="program-content">
+            <div class="program-speaker">Ryo Watanabe</div>
+            <div class="program-chair">Chair: TBA</div>
+            <div class="program-title">Tensor renormalization group analysis of entanglement negativity</div>
+        </div>
+    </div>
+
+    <!-- Talk 5 -->
+    <div class="program-item">
+        <div class="program-time">12:00&ndash;12:20</div>
+        <div class="program-content">
+            <div class="program-speaker">Kayo Kinjo</div>
+            <div class="program-chair">Chair: TBA</div>
+            <div class="program-title">Finding maximally correlated statistics for probability distributions in tensor-train format</div>
+        </div>
+    </div>
+
+    <!-- Talk 6 -->
+    <div class="program-item">
+        <div class="program-time">12:20&ndash;12:40</div>
+        <div class="program-content">
+            <div class="program-speaker">Mizokami Yuudai</div>
+            <div class="program-chair">Chair: TBA</div>
+            <div class="program-title"> Analysis of Spatial Hierarchical Structures Using the Quantics Tensor Train: Application to Vlasov Systems</div>
+        </div>
+    </div>
+
+    <!-- Lunch Break -->
+    <div class="program-break">
+        <div class="program-time">12:40&ndash;14:40</div>
+        <div>Lunch Break</div>
+    </div>
+
+    <!-- Talk 7 -->
+    <div class="program-item">
+        <div class="program-time">14:40&ndash;15:20</div>
+        <div class="program-content">
+            <div class="program-speaker">Kaito Kobayashi</div>
+            <div class="program-chair">Chair: TBA</div>
+            <div class="program-title">Holographic isometric tensor networks for representing highly entangled one-dimensional quantum systems</div>
+        </div>
+    </div>
+
+    <!-- Talk 8 -->
+    <div class="program-item">
+        <div class="program-time">15:20&ndash;15:40</div>
+        <div class="program-content">
+            <div class="program-speaker">Feng-Feng Song</div>
+            <div class="program-chair">Chair: TBA</div>
+            <div class="program-title">Tensor network approaches to non-reciprocal lattice models</div>
+        </div>
+    </div>
+
+    <!-- Talk 9 -->
+    <div class="program-item">
+        <div class="program-time">15:40&ndash;16:00</div>
+        <div class="program-content">
+            <div class="program-speaker">Tomotoshi Nishino</div>
+            <div class="program-chair">Chair: TBA</div>
+            <div class="program-title">Tensor Network picture of the nested Strassen algorithm</div>
+        </div>
+    </div>
+
+
+    <!-- Break -->
+    <div class="program-break">
+        <div class="program-time">16:00&ndash;16:15</div>
+        <div>Break</div>
+    </div>
+
+    <!-- Poster Session -->
+    <div class="program-item">
+        <div class="program-time">16:15&ndash;17:45</div>
+            <div class="program-content">
+
+                <div class="program-speaker">Poster Session</div>
+
+                <div class="poster-list">
+
+                    <div class="poster-item">
+                        <div class="program-speaker poster-speaker">[1] Fathiyya Izzatun Az-zahra</div>
+                        <div class="program-title">
+                            Multi-particle states investigation for (1+1)d real scalar field theory with tensor renormalization group method
+                        </div>
+                    </div>
+
+                    <div class="poster-item">
+                        <div class="program-speaker poster-speaker">[2] Sidharth Rammohan</div>
+                        <div class="program-title">
+                            Quantum dynamics in a planar array of hardcore Bose-Hubbard chains with interchain interactions: a cluster mean-field analysis
+                        </div>
+                    </div>
+
+                    <div class="poster-item">
+                        <div class="program-speaker poster-speaker">[3] Hayato Aizawa</div>
+                        <div class="program-title">
+                            Tensor Renormalization Group Study of the Step-Scaling Function in the CP(1) Model with a $\theta$ Term
+                        </div>
+                    </div>
+
+                    <div class="poster-item">
+                        <div class="program-speaker poster-speaker">[4] Yanming SU</div>
+                        <div class="program-title">
+                            Generalized Kennedy-Tasaki transformations from sandwich duality
+                        </div>
+                    </div>
+
+                    <div class="poster-item">
+                        <div class="program-speaker poster-speaker">[5] Shoichi Ichinose</div>
+                        <div class="program-title">
+                            TBA
+                        </div>
+                    </div>     
+                    
+                    <div class="poster-item">
+                        <div class="program-speaker poster-speaker">[6] Hirone Ishida</div>
+                        <div class="program-title">
+                            TT-VEGAS Algorithm: A Monte Carlo Integration Method with Multivariate Correlation Adaptation Using Tensor Trains
+                        </div>
+                    </div>    
+
+                    <div class="poster-item">
+                        <div class="program-speaker poster-speaker">[7] Ryo Minagawa</div>
+                        <div class="program-title">
+                            Probability Conservation in the Time Evolution of Classical Many-Body Systems
+                        </div>
+                    </div>    
+
+                    <div class="poster-item">
+                        <div class="program-speaker poster-speaker">[8] Ashutosh Pati Tripathi</div>
+                        <div class="program-title">
+                            Variational Quantum Simulation of Interacting Fermionic Models with Locality-Preserving Qubit Encodings
+                        </div>
+                    </div>        
+                    
+                    <div class="poster-item">
+                        <div class="program-speaker poster-speaker">[9] Archana Radhakrishnan</div>
+                        <div class="program-title">
+                            Towards the quantum simulation of QCD
+                        </div>
+                    </div>    
+
+                    <div class="poster-item">
+                        <div class="program-speaker poster-speaker">[10] Katsumasa Nakayama</div>
+                        <div class="program-title">
+                            Tensor renormalization group method for higher dimensional system
+                        </div>
+                    </div>   
+
+                    <div class="poster-item">
+                        <div class="program-speaker poster-speaker">[11] Sayan Mukherjee</div>
+                        <div class="program-title">
+                            When Does HOTRG Close? A Voltage-Graph-Lift Approach
+                        </div>
+                    </div>   
+
+                    <div class="poster-item">
+                        <div class="program-speaker poster-speaker">[12] Takaaki Kuwahara</div>
+                        <div class="program-title">
+                            TBA
+                        </div>
+                    </div>   
+
+                </div>
+            </div>
+    </div>
+
+    <!-- Break -->
+    <div class="program-break">
+        <div class="program-time">17:45&ndash;18:00</div>
+        <div>Break</div>
+    </div>
+
+    <!-- Banquet -->
+    <div class="program-item">
+        <div class="program-time">18:00&ndash;20:00</div>
+        <div class="program-content">
+            <div class="program-speaker">Banquet</div>
+        </div>
+    </div>
+
+</div>
+
+<div class="program-day">
+
+    <div class="program-date">
+        <h3>December 9th</h3>
+        <!--<span>Venue opens at 12:30</span>-->
+    </div>
+
+    <!-- Talk 1 -->
+    <div class="program-item">
+        <div class="program-time">9:30&ndash;10:30</div>
+        <div class="program-content">
+            <div class="program-speaker">Tatsuya Yokota</div>
+            <div class="program-chair">Chair: TBA</div>
+            <div class="program-title">Majorization Minimization for Tensor Network based Logistic Regression</div>
+        </div>
+    </div>
+
+    <!-- Talk 2 -->
+    <div class="program-item">
+        <div class="program-time">10:30&ndash;10:50</div>
+        <div class="program-content">
+            <div class="program-speaker">Hiroaki Matsueda</div>
+            <div class="program-chair">Chair: TBA</div>
+            <div class="program-title">Entanglement Structure of Quantum States in Quantum Energy Teleportation</div>
+        </div>
+    </div>
+
+    <!-- Break -->
+    <div class="program-break">
+        <div class="program-time">10:50&ndash;11:20</div>
+        <div>Break</div>
+    </div>
+
+    <!-- Talk 3 -->
+    <div class="program-item">
+        <div class="program-time">11:20&ndash;12:00</div>
+        <div class="program-content">
+            <div class="program-speaker">Seishiro Ono</div>
+            <div class="program-chair">Chair: TBA</div>
+            <div class="program-title">TBA</div>
+        </div>
+    </div>
+
+    <!-- Talk 4 -->
+    <div class="program-item">
+        <div class="program-time">12:00&ndash;12:20</div>
+        <div class="program-content">
+            <div class="program-speaker">Kohei Fujikura</div>
+            <div class="program-chair">Chair: TBA</div>
+            <div class="program-title">Uniform Matrix Product States for Cold and Dense \mathrm{QCD_2}</div>
+        </div>
+    </div>
+
+    <!-- Talk 5 -->
+    <div class="program-item">
+        <div class="program-time">12:20&ndash;12:40</div>
+        <div class="program-content">
+            <div class="program-speaker">Etsuko Itou</div>
+            <div class="program-chair">Chair: TBA</div>
+            <div class="program-title">Gauge-invariant PEPS for pure Z2 Gauge theory and its entanglement</div>
+        </div>
+    </div>
+
+    <!-- Closing -->
+    <div class="program-item">
+        <div class="program-time">12:40&ndash;12:45</div>
+        <div class="program-content">
+            <div class="program-title">Closing</div>
+        </div>
+    </div>
+
+</div>
 
 <h3><b>Registration</b></h3> 
 
